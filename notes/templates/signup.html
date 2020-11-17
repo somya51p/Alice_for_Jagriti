@@ -1,4 +1,4 @@
-{% extends 'navigation.html' %}
+{% extends 'base.html' %}
 
 {% load static %}
 {% block body %}
@@ -48,14 +48,6 @@
                 <div class="form-group">
                   <label for="pwd">Password:</label>
                   <input type="password" class="form-control" placeholder="Enter password" name="pwd">
-                </div>
-                <div class="form-group">
-                    <label for="branch">Branch:</label>
-                    <select class="form-control" placeholder="Enter Branch" name="branch">
-                        <option value="Computer Science">Computer Science</option>
-                        <option value="Electronics and Communication">Electronics and Communication</option>
-                        <option value="Mechanical">Mechanical</option>
-                    </select>
                 </div>
                 <div class="form-group">
                     <label for="role">Role:</label>

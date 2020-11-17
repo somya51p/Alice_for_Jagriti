@@ -42,11 +42,10 @@ def signup1(request):
         c = request.POST['contact']
         e = request.POST['email']
         p = request.POST['pwd']
-        b = request.POST['branch']
         r = request.POST['role']
         try:
             user = User.objects.create_user(username=e,password=p,first_name=f,last_name=l)
-            Signup.objects.create(user=user,contact=c,branch=b,role=r)
+            Signup.objects.create(user=user,contact=c,role=r)
             error="no"
         except:
             error="yes"
