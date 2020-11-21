@@ -2,12 +2,33 @@
 {% load static %}
 
 {% block body %}
-
+<style>
+    .image{
+        width: 100%;
+        height: 600px;
+        background: linear-gradient(orange,orangered);
+        opacity : 0.8;
+        background-repeat : no-repeat;
+        background-position : center;
+    }
+</style>
 
 <div class="image">
     <div class="backii">
         <h1 class="text-center"><i><b>Interactive JAGRITI Text-book</b></i></h1>
     </div>
+    <img class="img-middle block-center" src="https://www.mentalup.co/img/home/tablet-game-kid.png" loading="lazy" alt="educational games">
+
+    <div class="container">
+        <center>
+            <h3><i>Not every child can afford education..<br>
+                So Alice Is here to provide free Quality Education for Navaday Aspirants..</i></h3>
+        </center>
+        <br><br><br><br>
+    </div>
+
 </div>
+
+
 
 {% endblock %}
