@@ -51,3 +51,15 @@ def signup1(request):
             error="yes"
     d={'error':error}
     return render(request, 'signup.html', d)
+
+def Logout(request):
+    logout(request)
+    return redirect('index')
+
+def profile(request):
+    if not request.user.is_authenticated:
+        return redirect('login')
+    user = User.objects.get(id=request.user.id)
+    data = Signup.objects.get(user = user)
+    d = {'data':data, 'user':user}
+    return render(request, 'profile.html', d)
