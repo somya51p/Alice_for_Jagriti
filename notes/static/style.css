@@ -14,14 +14,6 @@
         
     }
 
-    .doabout{
-        color:white;
-        background: linear-gradient(grey,black);
-        margin-top:30px;
-        padding-top: 10px;
-        transition: 0.5s;
-    }
-
     .bb{
         margin-left: 205px;
         padding-left: 30px;
