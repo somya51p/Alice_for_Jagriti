@@ -12,6 +12,47 @@
         background-position : center;
 
     }
+    .img-middle:hover{
+        transform: scale(1.15);
+  transition: 0.5s;
+    }
+    .section {
+  padding-bottom: 5rem;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+.title h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.title span {
+background : -webkit-linear-gradient(orange 0%, orangered 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#services,
+#tours {
+  height: 80vh;
+}
+#services {
+  background: white;
+}
+    footer {
+  background:  dimgray;
+  padding: 5rem 1rem;
+}
+footer p {
+  color: white;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing:  0.25rem;
+  margin-bottom: 0;
+}
+
     /* .backii{
         padding-top: 220px;
         font-weight: bold;
@@ -31,12 +72,33 @@
         <center>
             <h3><i>Not every child can afford education..<br>
                 So Alice Is here to provide free Quality Education for Navaday Aspirants..</i></h3>
+
+                <br><br><br>
+                <h3><i>Alice brings teachers and students together to build an amazing learning community</i></h3>
         </center>
         <br><br><br><br>
     </div>
+</div><hr><hr>
+   <!-- services -->
+   <section id="services" class="section">
+    <div class="title">
+      <h2><b>our <span>services</span></b></h2>
+    </div>
+  </section>
+  <!-- contact -->
+  <section id="tours" class="section">
+    <div class="title">
+      <h2><b>featured <span>Results</span></b></h2>
+    </div>
+  </section>
 
-</div>
-
+   <!-- footer -->
+   <footer class="section">
+    <p>
+      copyright &copy; ALICE
+      <span id="date"></span>. all rights reserved
+    </p>
+  </footer>
 
 
 {% endblock %}
