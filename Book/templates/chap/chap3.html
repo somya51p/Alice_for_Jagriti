@@ -1,2 +1,260 @@
-<h1>chapter 3</h1>
-<h3>Approximation of Expressions (अनुमान लगाना और सामान्यीकरण)</h3>
+<!DOCTYPE html>
+<html>
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="styles.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
+ 
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 5px;
+  text-align: center;
+  background: dimgray;
+  color: aliceblue;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+    <div class="container">
+<div class="header">
+  <h1>Profit and Loss (लाभ और हानि)</h1>
+  <p>Chapter 3</p>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <!-- <h2>TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5> -->
+      <div class="fakeimg" style="height:200px;"></div>
+      <p></p>
+      <p>सबसे पहले हम लाभ एवं हानि ( Profit & Loss ) के बेसिक शब्दावलियों  [Basic Terminologies Related to Profit and Loss Maths Chapter)<br><br>
+ 
+        1. क्रय मूल्य ( Purchasing Price ) : यह वह मूल्य होता है, जिस पर कोई वस्तु खरीदी जाती है.<br><br>
+         
+        2. विक्रय मूल्य ( Selling Price ) : विक्रय मूल्य वह मूल्य होता है, जिस पर कोई वस्तु बेची जाती है.<br><br>
+         
+        3. उपरिव्यय : खरीदी गई वस्तु को बिक्री करने तक उस पर होने वाला व्यय [ Expenses ], जैसे बिक्री केन्द्र तक लाने में किया जाने वाला व्यय और इसके रख-रखाव पर किए गए व्यय आदि.
+        <br><br>
+        4. लागत मूल्य : यह क्रय मूल्य  और उपरिव्यय का योग होता है. इस प्रकार लागत मूल्य = क्रय मूल्य + उपरिव्यय
+        <br><br>
+        5. लाभ [ Profit ] : यह विक्रय मूल्य - क्रय मूल्य के बराबर होता है. यानी खरीदी गई वस्तु को जिस अधिक मूल्य पर विक्रय किया जाता है, वह अधिक मूल्य लाभ कहलाता है.
+        <br><br>
+        6. हानि [ Loss ] : यह क्रय मूल्य - विक्रय मूल्य के बराबर होता है. यदि कोई व्यापारी किसी वस्तु को क्रय मूल्य ( Purchasing Price ) से कम मूल्य पर बेच देता है, तो उसे हानि ( Loss ) होती है.
+        <br><br>
+        Note : Profit and Loss की गणना सदैव क्रय मूल्य पर की जाती है. The gain or loss is always reckoned on the cost price.
+        <br><br>
+        7. बट्टा [Discount ] हमेशा अंकित मूल्य [ Face Value ] पर गिना जाता है.
+        <br><br>
+        8. अंकित मूल्य [ Face Value ] : वस्तु का वह मूल्य जो उस पर अंकित होता है.
+        <br><br>
+        आइए अब हमलोग लाभ और हानि के सूत्र / फार्मूला देखते हैं. पुन: लाभ और हानि के प्रश्न देखेंगे. [ Profit and Loss Formula and tricks in Hindi ]
+        ऊपर हमने Profit and Loss के कुछ महत्वपूर्ण सूत्र / फार्मूले देखे, जैसे क्रय मूल्य, विक्रय मूल्य, लाभ एवं हानि आदि क्या है एवं इसके सूत्र क्या हैं. अब हम यहाँ प्रतिशत लाभ यानी Gain percentage और प्रतिशत हानि यानी Loss% के Formulae देखेंगे.
+        <br><br>
+        9. प्रतिशत लाभ [ Gain% ] = [(Gain*100)/CP]% यानी [(लाभ * 100) / क्रय मूल्य]%
+        <br><br>
+        10. प्रतिशत हानि [ Loss% ] = [(Loss*100)/CP]% यानी  [(हानि * 100) / क्रय मूल्य]%
+        <br><br>
+        11. जब लाभ अथवा हानि प्रतिशत और क्रय मूल्य दिया रहे, तो विक्रय मूल्य ज्ञात करना [ To find Selling Price when Cost Price and gain% or loss% are given ]
+        When gain% are given,
+        SELLING PRICE =
+        <br><br>
+         
+         
+        When loss% are given, जब हानि% दिया रहे तो विक्रय मूल्य =
+        
+        <br><br>
+        12. क्रय मूल्य ज्ञात करना, जब विक्रय मूल्य तथा लाभ अथवा हानि प्रतिशत दिया रहे [ To Find CP when Selling Price and gain% or loss% are given ]
+        
+        <br><br>
+        </p>
+    </div>
+    <div class="card">
+      <h2></h2>
+      <h5></h5>
+      <div class="fakeimg" style="height:200px;"></div>
+      <p></p>
+      <p>आइए अब हमलोग लाभ और हानि ( Profit and Loss )के उपर्युक्त सूत्र ( Formula ) से संबंधित सवाल [ Questions ] देखते हैं.
+        उदाहरण [ Examples ]<br><br>
+        1. किसी 1100 रूपये की वस्तु को 120 रूपये में बेचा जाता है. लाभ प्रतिशत की गणना करें.
+         
+        हल : वस्तु का क्रय मूल्य = 100 रूपया तथा विक्रय मूल्य = 120 रूपया
+        इसलिए लाभ = 120-100 = 20 रूपया
+        इसलिए लाभ% = लाभ*100/क्रय मूल्य = 20*100 /100 = 20%  [उत्तर]
+        <br><br>
+        2. किसी 500 रूपये की वस्तु को 400 रूपये में बेच दी जाती है. हानि प्रतिशत की गणना करें.
+         
+        हल : दिया है, वस्तु का क्रय मूल्य = 500 रूपया तथा विक्रय मूल्य = 400 रूपया
+        इसलिए हानि = 500-400 = 100 रूपया
+        अतः हानि% = 100*100/500 = 20% हानि [उत्तर]
+        <br><br>
+        3. 500 रूपये की वस्तु को कितने में बेचा जाए ताकि 20 प्रतिशत लाभ हो ?
+         
+        हल : वि. मू. = [(100+20)/100] * 500 = 600 रूपया [उत्तर]
+        <br><br>
+        4. 960 रूपया में किसी वस्तु को बेचेजाने पर  20% का लाभ होता है. वस्तु का क्रय मूल्य क्या है ?
+         
+        हल : क्रय मूल्य = ( 100 ) / (100+20 )] * 960 = 800 रूपया [उत्तर]
+        <br><br>
+        5. कोई वस्तु 300 रूपये में बेचे जाने पर 25 % की हानि होती है. वस्तु का क्रय मूल्य क्या है ?
+         
+        हल : क्रय मूल्य = [100 / 100-250] * 300 = [100/75]* 300 = 400 रूपया [उत्तर]
+         
+        **लाभ और हानि के सवाल से संबंधित महत्वपूर्ण ट्रिक [ Profit and Loss Math Trick ]
+        <br><br>
+         
+        जब कोई दो वस्तु समान मूल्य पर बेचा [ Sell ] किया जाता है और उसमें से एक पर x%loss तथा दूसरे पर x%Profit होता है, तो ऐसी स्थिति में विक्रेता [seller] को loss होती है और यह loss x का x % के बराबर होती है.
+         
+        <br><br>
+         
+         
+        उदाहरण [ Example ]
+        कोई व्यक्ति दो मोटरसाइकल को 500 रूपये प्रत्येक मोटरसाइकल की दर से बेचता है. . इस प्रकार उसे पहले मोटरसाइकल पर 10% लाभ तथा दूसरे पर 10% की हानि होती है. बताएँ कि उसे कुल पर कितने प्रतिशत की लाभ या हानि हुई ?
+         
+        हल : ऐसी स्थिति में सदैव seller loss उठाता है. इसलिए यहाँ भी उसे हानि हुई और यह हानि 10 का 10 % = 1% के बराबर होगी.
+         
+        लाभ और हानि [ Profit and Loss questions related to defective weight , Solving trick] के दोषयुक्त बाट अथवा किलो से संबंधित प्रश्न का हल कैसे करें, ट्रिक एवं सूत्र.
+         
+        यदि कोई दुकानदार अथवा व्यापारी अपनी वस्तु को क्रय मूल्य पर बेचता है और दोषयुक्त बाट का प्रयोग करता है, तो लाभ% =
+        
+        <br><br>
+         
+         
+        Profit and Loss math trick and formula for solving the problems. लाभ और हानि फार्मूला एवं ट्रिक. Image देखें.
+        
+         
+        
+        <br><br><br><br>
+         
+        लाभ एवं हानि ( Profit and Loss questions based on this formula ) के उपर्युक्त इमेज से संबंधित सवाल देखें.
+        1. किसी वस्तु को 400 रूपये में बेचने पर 25% लाभ होता है. उसे कितने में बेचा जाए ताकि 10% हानि हो ?
+        <br><br>
+        2. किसी वस्तु को 400 रूपये में बेचने पर 25% हानि होती है. 10% लाभ पर बेचने के लिए वस्तु का विक्रय मूल्य क्या होगा ?
+        <br><br>
+        आइए अब लाभ और हानि यानी Profit and Loss related एक और फार्मूला और ट्रिक देखते हैं. इसके आधार पर सवाल का जवाब बिना कलम चलाए दिए जा सकते हैं. लाभ और हानि से संबंधित ऐसे प्रश्नों के लिए इन Short Trick की सहायता लें.
+         
+        अगर दो वस्तुओं का क्रय मूल्य समान हो तथा एक वस्तु को बेचने पर x%Profit तथा दूसरे परx% loss तो, ऐसी स्थिति में seller को ना तो profit होगा और ना ही loss.
+        <br><br></p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p> We Are Alice. An Online Eduacation Plateform For Quality Education.<br>
+            
+        Made By- Animesh Kumar, Somya Prajapati and Abhishek Yadav </p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+    </div>
+    <div class="card">
+      <h3>Follow</h3><br><br>
+      <a class="btn btn-social-icon btn-instagram" href="https://instagram.com/jagrati.iiitdmj?igshid=1deuevtefgqnb"><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  
+  <p>
+    copyright &copy; ALICE
+    <span id="date"></span>. all rights reserved
+  </p>
+</div>
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+
+</body>
+</html>

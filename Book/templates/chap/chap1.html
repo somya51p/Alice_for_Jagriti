@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  {% load static %}
      <!-- Required meta tags -->
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -242,9 +243,10 @@ body {
     </div>
     <div class="card">
       <h3>Popular Post</h3>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
+     
+      <div class="fakeimg"><img src="{% static '../1.PNG' %}" style="width:100%"></div>
+      <div class="fakeimg"><img src="{% static '../2.PNG' %}" style="width:100%"></div>
+      <div class="fakeimg"><img src="{% static '../3.PNG' %}" style="width:100%"></div>
     </div>
     <div class="card">
       <h3>Follow</h3><br><br>
