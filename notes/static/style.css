@@ -39,4 +39,6 @@
     .jumbotron{
         color: black;
     }
-    
+    .nav-item:hover{
+        background-color: orange;
+    }

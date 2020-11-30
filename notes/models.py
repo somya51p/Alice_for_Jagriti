@@ -10,3 +10,17 @@ class Signup(models.Model):
 
     # def __str__(self):
     #     return self.user.username
+
+
+class Notes(models.Model):
+    user = models.ForeignKey(User,on_delete=models.CASCADE,null=True)
+    uploadingdata = models.CharField(max_length=10,null=True)
+    branch = models.CharField(max_length=30,null=True)
+    subject = models.CharField(max_length=30,null=True)
+    notesfile = models.FileField(null=True)
+    filetype = models.CharField(max_length=30,null=True)
+    description = models.CharField(max_length=300,null=True)
+    status = models.CharField(max_length=30,null=True)
+
+    def __str__(self):
+        return self.signup.user.username+" "+self.status
