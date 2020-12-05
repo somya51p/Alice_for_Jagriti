@@ -1,0 +1,26 @@
+
+<p>Hello {{ attempt.user }} Result of this quiz is:  </p>
+<p>No of Question is/are {{no_of_questions}}</p>
+<table>
+    <tr>
+        <th>Question Number</th>
+        <th>Your Response</th>
+        <th>Correct Response</th>
+        <th>Max Score</th>
+        <th>Your Score</th>
+        {% for ans in answers %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{ ans.0 }}</td>
+                <td>{{ ans.1 }}</td>
+                <td>{{ ans.2 }}</td>
+                <td>{% if ans.0 == ans.1 %}
+                        {{ans.2}}
+                    {% else %}
+                        {{ 0 }}
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+    </tr>
+</table>

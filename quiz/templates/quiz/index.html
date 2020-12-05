@@ -1,0 +1,17 @@
+<table>
+    <tr>
+        <th>ATTEMPT NO</th>
+        <th>TAKER NAME</th>
+        <th>TOTAL SCORE</th>
+        <th>SUBMISSION TIME</th>
+    </tr>
+    {% for attempt in attempts %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{attempt.user}}</td>
+            <td>{{attempt.total_score}}</td>
+            <td>{{ attempt.submitted_at}}</td>
+        </tr>
+    {% endfor %}
+    
+</table>

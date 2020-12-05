@@ -14,5 +14,6 @@ urlpatterns = [
     path('profile/', profile, name='profile'),
     path('', index, name='index'),
     path('Book/', include('Book.urls')),
+    path('quiz/', include('quiz.urls'))
 
 ]
