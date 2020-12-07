@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="styles.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
+ 
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 5px;
+  text-align: center;
+  background: dimgray;
+  color: aliceblue;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+    <div class="container">
+<div class="header">
+  <h1>संख्या</h1>
+  <p>Chapter 4</p>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <!-- <h2>TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5> -->
+      <div class="fakeimg" style="height:200px;"></div>
+      <p></p>
+      <p>✶ प्राकृत संख्याएँ (Natural Numbers): वस्तुओं को गिनने के लिए जिन संख्याओं का प्रयोग किया जाता है, उन्हें गणन संख्याएँ या ‘प्राकृत संख्याएँ’ कहते हैं।
+        जैसे- 1, 2, 3, 4, 5,6,7, . . . .<br><br>
+        ✶ पूर्ण संख्याएँ (Whole Numbers): प्राकृत संख्याओं में शून्य को मिलाने पर जो संख्याएँ प्राप्त होती हैं उन्हें ‘पूर्ण संख्याएँ’ कहते हैं।
+        जैसे- 0, 1, 2, 3, 4, 5, 6, 7, . . . .<br><br>
+        ✶ पूर्णांक संख्याएँ (Integers):प्राकृत संख्याओं में शून्य एवं ऋणात्मक संख्याओं को मिलाने पर जो संख्याएँ प्राप्त होती हैं, उन्हें ‘पूर्णांक संख्याएँ’ कहते हैं।
+        जैसे- -3, -2, -1, 0, 1, 2, 3, . . . .<br><br>
+        ✶ सम संख्याएँ (Even Numbers): वे संख्याएँ जो 2 से पूर्णतः विभाजित होती हैं उन्हें ‘सम संख्याएँ’ कहते हैं।
+        जैसे - 2, 4, 6, 8, . . .<br><br>
+        ✶ विषम संख्याएँ (Odd Numbers) : वे संख्याएँ जो 2 से पूर्णतः विभाजित नहीं होती हैं उन्हें ‘विषम संख्याएँ ’ कहते हैं।
+        जैसे- 1, 3, 5, 11, 17, 29, 39 , . . . .<br><br>
+        ✶ अभाज्य संख्याएँ (Prime Numbers): वे संख्याएँ जो स्वयं और 1 के अलावा अन्य किसी संख्या से विभक्त नहीं होती हैं उन्हें ‘अभाज्य संख्याएँ’ कहते हैं।
+        जैसे- 2, 3, 7, 11, 13, 17 ……….<br><br>
+        नोट -‘1’ न तो अभाज्य संख्या है और न ही भाज्य संख्या
+        ✶ भाज्य संख्याएँ (Composite Numbers): वे संख्याएँ जो स्वयं और 1 के अलावा अन्य किसी संख्या से पूर्णतः विभक्त हो जाती हैं ,उन्हें ‘भाज्य संख्याएँ ’ कहते हैं।
+        जैसे- 4, 6, 8, 9, 10, …………<br><br>
+        ✶ असहभाज्य संख्याएँ (Co-Prime Numbers) : जब दो या दो से अधिक संख्याओं में कोई भी उभयनिष्ठ गुणनखंड न हो अथवा जिसका म.स. 1 हो ,वे एक साथ ‘सह-अभाज्य संख्याएँ’ कहलाती हैं।
+        जैसे- (4,9) , (12,25) ,(8,9,12) ।<br><br>
+        ✶ युग्म-अभाज्य संख्याएँ : ऐसी अभाज्य संख्याएँ जिनके बीच का अंतर 2 हो ‘युग्म-अभाज्य संख्याएँ’ कहलाती हैं।
+        जैसे- 11, 13<br><br>
+        ✶ परिमेय संख्याएँ (Rational Numbers): वे संख्याएँ जिन्हें 
+        p/q
+         के रूप में लिखा जा सकता है ,जहाँ p तथा q पूर्णांक हैं एवं q ≠ 0 ‘परिमेय संख्याएँ’ कहलाती हैं ।
+        जैसे-
+        3,4,5,6, 4, 1.77 , 0 , 2.3 ……… ।<br><br>
+        ✶ अपरिमेय संख्याएँ (Irrational Numbers): वे संख्याएँ जिन्हें 
+        p
+        q
+         के रूप में नहीं लिखा जा सकता ,जहाँ p तथा q पूर्णांक हैं एवं q ≠ 0 अपरिमेय संख्याएँ’ कहलाती हैं ।
+        जैसे - √2, √15 , √2 , 5 1/3 , π आदि<br><br>
+        ✶ वास्तविक संख्याएँ (Real Numbers) :सभी परिमेय तथा अपरिमेय संख्याएँ ‘वास्तविक संख्याएँ’ कहलाती हैं।
+        जैसे - 4 , 6, 2 ,√7, +4 , -2 आदि ।<br><br>
+        ✶ काल्पनिक संख्याएँ (Imaginary Numbers) : ऋणात्मक संख्यायों का वर्गमूल लेने पर जो संख्याएं बनती हैं , उन्हें काल्पनिक संख्याएं कहते हैं ।
+        जैसे -√ - 2, √ - 5
+        <br><br>
+        <br><br>
+        </p>
+    </div>
+    <div class="card">
+      <h2></h2>
+      <h5></h5>
+      <div class="fakeimg" style="height:200px;"></div>
+      <p></p>
+      <p>संख्याओं पर कुछ विशेष बिन्दु
+        ✶ संख्या 1 न तो भाज्य है और न अभाज्य ।<br><br>
+        ✶ ऐसी संख्या जो अभाज्य हो एवं सम संख्या हो केवल 2 है ।<br><br>
+        ✶ वे दो अभाज्य संख्याएँ जिनके बीच केवल एक सम संख्या होती है , अभाज्य जोड़ा कहलाती है , जैसे - 5 व 7 , 3 व 5 , 11 व 13 , 17 व 19 , 29 व 31 आदि ।<br><br>
+        ✶ सभी प्राकृत संख्याएँ , पूर्ण , पूर्णाक , परिमेय एवं वास्तविक होती हैं ।<br><br>
+        ✶ सभी पूर्ण संख्याएँ , पूर्णांक , परिमेय एवं वास्तविक होती हैं ।<br><br>
+        ✶ सभी पूर्णाक , परिमेय एवं वास्तविक होते हैं ।<br><br>
+        ✶ सभी पूर्णांक , परिमेय एवं अपरिमेय संख्याएँ वास्तविक होती हैं ।<br><br>
+        ✶ अभाज्य ( रूढ़ ) एवं यौगिक , सम तथा विषम संख्या होती हैं।<br><br>
+        ✶सभी पूर्णाक , परिमेय एवं अपरिमेय संख्याएँ ऋणात्मक एवं धनात्मक दोनों होती हैं ।<br><br>
+        ✶ प्राकृत ( अभाज्य , यौगिक , सम एवं विषम ) एवं पूर्ण संख्याएँ कभी भी ऋणात्मक नहीं होती हैं ।<br><br>
+        ✶ भिन्न संख्याएँ परिमेय होती हैं ।<br><br>
+        ✶ 2 के अतिरिक्त सभी अभाज्य ( रूढ़ ) संख्याएँ विषम होती हैं ।<br><br>
+        ✶. 0 ऋणात्मक एवं धनात्मक नहीं है ।<br><br>
+        ✶ शून्य ( 0 ) में किसी भी संख्या का भाग देने पर शून्य आता है . अतः 
+        0<br><br>
+        a= 0 ( यहाँ पर a वास्तविक संख्या है ) ।
+        ✶ किसी भी संख्या में शून्य का भाग देना परिभाषित नहीं है अर्थात् यदि किसी भी संख्या में शून्य का भाग देते हैं , तो भागफल अनन्त ( Infinite या Non Defined ) आता है . अतः 
+        A 0 = ∞ ( Infinite ) ।<br><br>
+        ✶किसी संख्या में किसी अंक का जो वास्तविक मान होता है , उसे जातीय मान कहते हैं , जैसे - 5283 में 2 का जातीय मान 2 है ।<br><br>
+        ✶ किसी संख्या में किसी अंक का स्थान के अनुसार जो मान होता है उसे उसका स्थानीय मान कहते हैं , जैसे - 5283 में 2 का स्थानीय मान 200 है ।<br><br>
+        ✶ दो परिमेय संख्याओं का योगफल अथवा गुणनफल सदैव एक परिमेय संख्या होती है ।<br><br>
+        ✶ दो अपरिमेय संख्याओं का योगफल अथवा गुणनफल कभी परिमेय संख्या तथा कभी अपरिमेय संख्या होता है ।<br><br>
+        ✶एक परिमेय संख्या तथा एक अपरिमेय संख्या का गुणनफल अथवा योगफल सदैव एक अपरिमेय संख्या होता है ।<br><br>
+        ✶π एक अपरिमेय संख्या है ।<br><br>
+        ✶ दो परिमेय संख्याओं या दो अपरिमेय संख्याओं के बीच अनन्त परिमेय संख्याएँ या अनन्त अपरिमेय संख्याएँ हो सकती हैं ।<br><br>
+        ✶ परिमेय संख्या को दशमलव निरूपण या तो सीमित होता है या असीमित आवर्ती होता है , जैसे 
+        3
+        4 = 0.75 ( सीमित )  11
+        3= 3.666 ( असीमित आवर्ती )।<br><br>
+        ✶ अपरिमेय संख्या का दशमलव निरूपण अनन्त व अनावर्ती होता है , जैसे - √3 , √2 ।<br><br>
+        ✶ प्रत्येक सम संख्या का वर्ग एक सम संख्या होती है तथा प्रत्येक विषम संख्या का वर्ग एक विषम संख्या होती है ।<br><br>
+        ✶ प्रथम n प्राकृतिक संख्याओं का योग
+        SnE =n (n + 1 )/2
+         होता है ।<br><br>
+        ✶प्रथम n सम संख्याओं का योग SE = n ( n + 1 ) होता है ।<br><br>
+        ✶प्रथम n विषम संख्याओं का योग S0 = n2 होता है ।<br><br>
+        ✶ यदि दशमलव संख्याएँ 0.x तथा 0.xy के रूप में दी होती हैं , तो इन्हें परिमेय संख्या 
+        pq
+         के रूप में निम्नवत् बदलते हैं
+        0.x = x10
+        तथा 0.xy = xy100
+        अर्थात् दशमलव के बाद 1 अंक है , तो 10 का , दो अंक हैं , तो 100 का , तीन अंक हैं , तो 1000 का भाग देने पर दशमलव संख्या परिमेय ( भिन्न ) बन जाती है ।<br><br>
+        ✶ यदि अशान्त ( अनन्त ) आवर्ती दशमलव संख्याएँ 0.x तथा xy के रूप की हैं , तो इन्हें परिमेय संख्या 
+        pq
+         के रूप में निम्नवत् बदलते हैं -
+        0.x = x9
+        तथा 0.xx = xx99
+        अर्थात् दशमलव के बाद 1 अंक बार सहित हो , तो 9 का , दो अंक बार सहित हों तो 99 का , तीन अंक हों तो 999 का भाग करके दशमलव संख्या परिमेय में बदल जाती है ।<br><br>
+        ✶यदि अशान्त आवर्ती दशमलव संख्याएँ 0.xy तथा 0.xyz के रूप की हों , तो इन्हें परिमेय संख्या 
+        pq
+         के रूप में निम्नवत् बदलते हैं - 0.xy 
+        xy - x90
+         तथा 0.xyz = xyz - x990
+         ( यहाँ x , y , z प्राकृतिक अंक हैं )<br><br>
+        ✶ किसी भी पहाड़े का योग उस संख्या ( पहाड़े ) के 55 गुने के बराबर होता है ।
+        अर्थात् n के पहाड़े का योगफल = 55n
+        <br><br></p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p> We Are Alice. An Online Eduacation Plateform For Quality Education.<br>
+            
+        Made By- Animesh Kumar, Somya Prajapati and Abhishek Yadav </p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+    </div>
+    <div class="card">
+      <h3>Follow</h3><br><br>
+      <a class="btn btn-social-icon btn-instagram" href="https://instagram.com/jagrati.iiitdmj?igshid=1deuevtefgqnb"><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  
+  <p>
+    copyright &copy; ALICE
+    <span id="date"></span>. all rights reserved
+  </p>
+</div>
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+
+</body>
+</html>

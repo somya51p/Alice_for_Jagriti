@@ -1,0 +1,147 @@
+{% extends 'user_nav.html' %}
+
+{% block body %}
+
+<style>
+   .card {
+  box-shadow: 10px 10px 5px grey;
+}
+.card:hover{
+  transform: scale(1.15);
+  transition: 0.5s;
+}
+</style>
+    <center><h1>Chapter Index</h1></center><br><br>
+    <!-- <p>1. <a href="{% url 'Book:chapter_name' 1 %}">संख्या पद्धति
+    </a></p>
+    <p>2. <a href="{% url 'Book:chapter_name' 2 %}">पूर्ण संख्याओं पर आधारभूत संक्रियाएं
+    </a></p>
+    <p>3. <a href="{% url 'Book:chapter_name' 3 %}">गुणनखंड तथा गुणज
+    </a></p>
+    <p>4. <a href="{% url 'Book:chapter_name' 4 %}">ल.स. तथा म.स.
+    </a></p>
+    <p>5. <a href="{% url 'Book:chapter_name' 5 %}">भिन्नात्मक संख्याएं
+    </a></p>
+    <p>6. <a href="{% url 'Book:chapter_name' 6 %}">संख्या पद्धति
+    </a></p>
+    <p>7. <a href="{% url 'Book:chapter_name' 7 %}">संख्या पद्धति
+    </a></p>
+    <p>8. <a href="{% url 'Book:chapter_name' 8 %}">संख्या पद्धति
+    </a></p>
+    <p>9. <a href="{% url 'Book:chapter_name' 9 %}">संख्या पद्धति
+    </a></p>
+    <p>10. <a href="{% url 'Book:chapter_name' 10 %}">संख्या पद्धति
+    </a></p>
+    <p>11. <a href="{% url 'Book:chapter_name' 11 %}">संख्या पद्धति
+    </a></p>
+    <p>12. <a href="{% url 'Book:chapter_name' 12 %}">संख्या पद्धति
+    </a></p>
+    <p>13. <a href="{% url 'Book:chapter_name' 13 %}">संख्या पद्धति
+    </a></p>
+    <p>14. <a href="{% url 'Book:chapter_name' 14 %}">संख्या पद्धति
+    </a></p>
+    <p>15. <a href="{% url 'Book:chapter_name' 15 %}">संख्या पद्धति
+    </a></p> -->
+    <div class="container">
+    <div class="card-deck">
+        <div class="card border-warning bg-light mb-3" style="max-width:25rem;">
+          <div class="card-body text-warning text-center">
+            <p class="card-text"><b>1. <a href="{% url 'Book:chapter_name' 1 %}" style="color: orange;">संख्या पद्धति<br><br><br><br>
+            </a></b></p>
+          </div>
+        </div>
+        <div class="card border-warning bg-light mb-3" style="max-width:25rem;">
+          <div class="card-body text-warning text-center">
+            <p class="card-text"><b>2. <a href="{% url 'Book:chapter_name' 2 %}" style="color: orange;">पूर्ण संख्याओं पर आधारभूत संक्रियाएं
+            </a></b></p>
+          </div>
+        </div>
+        <div class="card border-warning bg-light mb-3" style="max-width:25rem;">
+          <div class="card-body text-warning text-center">
+            <p class="card-text"><b>3. <a href="{% url 'Book:chapter_name' 3 %}" style="color: orange;">गुणनखंड तथा गुणज
+            </a></b></p>
+          </div>
+        </div> 
+    </div><br><br><br>
+    <div class="card-deck">
+        <div class="card border-warning bg-light mb-3" style="max-width:25rem;">
+          <div class="card-body text-warning text-center">
+            <p class="card-text"><b>4. <a href="{% url 'Book:chapter_name' 4 %}" style="color: orange;">ल.स. तथा म.स.
+            </a></b></p>
+          </div>
+        </div>
+        <div class="card border-warning bg-light mb-3" style="max-width:25rem;">
+            <div class="card-body text-warning text-center">
+              <p class="card-text"><b>5. <a href="{% url 'Book:chapter_name' 5 %}" style="color: orange;">भिन्नात्मक संख्याएं<br><br><br><br>
+              </a></b></p>
+            </div>
+          </div>
+          <div class="card border-warning bg-light mb-3" style="max-width:25rem;">
+            <div class="card-body text-warning text-center">
+              <p class="card-text"><b>6. <a href="{% url 'Book:chapter_name' 6 %}" style="color: orange;">संख्या पद्धति
+              </a></b></p>
+            </div>
+          </div>
+    </div><br><br><br>
+    <div class="card-deck">
+          <div class="card border-warning bg-light mb-3" style="max-width:25rem;">
+            <div class="card-body text-warning text-center">
+              <p class="card-text"><b>7. <a href="{% url 'Book:chapter_name' 7 %}" style="color: orange;">संख्या पद्धति<br><br><br><br>
+              </a></b></p>
+            </div>
+          </div>
+          <div class="card border-warning bg-light mb-3" style="max-width:25rem;">
+            <div class="card-body text-warning text-center">
+              <p class="card-text"><b>8. <a href="{% url 'Book:chapter_name' 8 %}" style="color: orange;">संख्या पद्धति
+              </a></b></p>
+            </div>
+          </div>
+          <div class="card border-warning bg-light mb-3" style="max-width:25rem;">
+            <div class="card-body text-warning text-center">
+              <p class="card-text"><b>9. <a href="{% url 'Book:chapter_name' 9 %}" style="color: orange;">संख्या पद्धति
+              </a></b></p>
+            </div>
+          </div>
+    </div><br><br><br>
+    <div class="card-deck">
+          <div class="card border-warning bg-light mb-3" style="max-width:25rem;">
+            <div class="card-body text-warning text-center">
+              <p class="card-text"><b>10. <a href="{% url 'Book:chapter_name' 10 %}" style="color: orange;">संख्या पद्धति<br><br><br><br>
+              </a></b></p>
+            </div>
+          </div>
+          <div class="card border-warning bg-light mb-3" style="max-width:25rem;">
+            <div class="card-body text-warning text-center">
+              <p class="card-text"><b>11. <a href="{% url 'Book:chapter_name' 11 %}" style="color: orange;">संख्या पद्धति
+              </a></b></p>
+            </div>
+          </div>
+          <div class="card border-warning bg-light mb-3" style="max-width:25rem;">
+            <div class="card-body text-warning text-center">
+              <p class="card-text"><b>12. <a href="{% url 'Book:chapter_name' 12 %}" style="color: orange;">संख्या पद्धति
+              </a></b></p>
+            </div>
+          </div>
+    </div><br><br><br>
+    <div class="card-deck">
+          <div class="card border-warning bg-light mb-3" style="max-width:25rem;">
+            <div class="card-body text-warning text-center">
+              <p class="card-text"><b>13. <a href="{% url 'Book:chapter_name' 13 %}" style="color: orange;">संख्या पद्धति<br><br><br><br>
+              </a></b></p>
+            </div>
+          </div>
+          <div class="card border-warning bg-light mb-3" style="max-width:25rem;">
+            <div class="card-body text-warning text-center">
+              <p class="card-text"><b>14. <a href="{% url 'Book:chapter_name' 14 %}" style="color: orange;">संख्या पद्धति
+              </a></b></p>
+            </div>
+          </div>
+          <div class="card border-warning bg-light mb-3" style="max-width:25rem;">
+            <div class="card-body text-warning text-center">
+              <p class="card-text"><b>15. <a href="{% url 'Book:chapter_name' 15 %}" style="color: orange;">संख्या पद्धति
+              </a></b></p>
+            </div>
+          </div>
+      </div><br><br><br>
+      </div>
+{% endblock %}

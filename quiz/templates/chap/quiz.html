@@ -1,0 +1,13 @@
+
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {% for question in questions %}
+    <p><label for="{{question.id}}"></label>{{ question.ques_text }}</p>
+    {% for option in question.option_set.all %}
+        <input type="radio" name="answer{{question.id}}" id="{{question.id}}" value="{{option.id}}">{{ option.option_num }}. {{option.option_text}} <br>
+    {% endfor %}
+{% endfor %}
+
+    <input type="submit" value="submit">
+</form>

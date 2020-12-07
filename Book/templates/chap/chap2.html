@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="styles.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
+ 
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 5px;
+  text-align: center;
+  background: dimgray;
+  color: aliceblue;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+    <div class="container">
+<div class="header">
+  <h1>ब्याज</h1>
+  <p>Chapter 2</p>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <!-- <h2>TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5> -->
+      <div class="fakeimg" style="height:200px;"></div>
+      <p></p>
+      <p>साधारण ब्याज क्या है ? What is Simple Interest ? - In Hindi. 
+        साधारण ब्याज की परिभाषा : जो ब्याज केवल मूलधन पर एक निश्चित दर पर जोड़ा जाता है, उसे हम साधारण ब्याज  [ Simple Interest ] कहते हैं.<br><br>
+        मूलधन [Principle] : जब हम कोई धन उधार लेते हैं, तो यह उधार लिया गया धन मूलधन कहलाता है.<br><br>
+        ब्याज [Interest] : उधार लिए गए धन पर जो अतिरिक्त राशि हम उधार देने वाले को चुकाते हैं, यह अतिरिक्त राशि ब्याज कहलाती है.<br><br>
+        उदाहरण के लिए, राम ने मोहन से 500 रूपये की राशि उधार ली और कुछ समय बाद उसने मोहन को 600 रूपये चुकाये. तो यहां मूलधन 500 रूपये और ब्याज 100 रूपये होगा.
+        
+        <br><br><br><br>
+        3. दर [Rate] : उधार ली गई राशि पर हमें एक निश्चित दर पर ब्याज चुकाना होता है.<br><br>
+        उदाहरण के लिए, राम ने मोहन से 500 रुपये की राशि 5 प्रतिशत वार्षिक की दर से उधार लिया. तो यहां स्पष्ट है कि दर 5 प्रतिशत वार्षिक है.
+        आगे उदाहरण से और सारी बातें स्पष्ट हो जाएंगी
+        <br><br>
+        साधारण ब्याज से सम्बन्धित महत्वपूर्ण सूत्र - Formula 
+        1. 
+        
+        साधारण ब्याज =    (मूलधन * समय * दर)/100 <br><br>
+        
+        2.
+        मूलधन = (ब्याज * 100) / (समय * दर)<br><br>
+        
+        3.
+        समय =  (ब्याज * 100) / (मूलधन * दर) <br><br>
+        
+        4. दर = (ब्याज * 100) / (मूलधन * समय)
+        <br><br>
+        5. 
+        ब्याज = (मिश्रधन - मूलधन)
+        <br><br>
+        6. 
+        मिश्रधन = (मूलधन + ब्याज)
+        
+        <br><br>
+        साधारण ब्याज पर आधारित सवाल (उदाहरण)
+        *500 रू. का 5 प्रतिशत वार्षिक साधारण ब्याज की दर से 2 वर्षों का साधारण ब्याज ज्ञात करें.
+        **हल:
+        यहां दिया है:
+        मूलधन = 500 रू.
+        समय = 2 वर्ष
+        दर = 5 प्रतिशत वार्षिक
+        तो साधारण ब्याज = मूलधन*समय*दर/100
+        500*2*5/100 = 50 रूपये साधारण ब्याज होगा.
+        <br><br>
+        *अब यदि इसी प्रश्न में ये पूछा जाए कि दो वर्षों के अन्त में मिश्रधन क्या होगा, तो हम मिश्रधन वाला सूत्र का प्रयोग करेंगे.
+        मिश्रधन = मूलधन + ब्याज
+        तो मिश्रधन = 500 + 50 =550रूपये मिश्रधन होगा.
+        <br><br>
+        **कितने प्रतिशत वार्षिक साधारण ब्याज की दर से 500 रूपये मूलधन का साधारण ब्याज दो वर्षों में 40रूपया हो जाएगा ?
+        
+        *हल : यहां दर पूछा जा रहा है.
+        तो दर = (ब्याज*100)/मूलधन*समय
+        = 40*100)/500*2 = 4 प्रतिशत उत्तर.
+        <br><br>
+        इसी प्रकार हम मूलधन, ब्याज एवं दर के दिए होने पर समय की भी गणना कर सकते हैं.
+        प्रश्न: कितने वर्षों में 500 रूपये मूलधन का चार प्रतिशत वार्षिक ब्याज की दर से साधारण ब्याज 40 रूपया हो जाएगा ?
+        हल:
+        समय = (ब्याज*100)/मूलधन*दर
+        = (40*100)/500*4
+        = 2 वर्ष उत्तर.
+        <br><br>
+        अब हम साधारण ब्याज के प्रश्नों को शीघ्रता से हल करने के लिए शार्ट ट्रिक देखेंगे.
+        साधारण ब्याज ट्रिक - प्रतियोगिता परीक्षाओं के लिए बेहद उपयोगी - Simple Interest Short Trick In Hindi. 
+        <br><br>
+        **यदि कोई धन किसी साधारण ब्याज की दर से t वर्षों में n गुना हो जाए तो दर =
+        (n-1)*100 / t
+        <br><br>
+        **यदि कोई धन x% ब्याज की दर से कुछ समय में n गुना  जाती है तो समय =
+        (n-1)*100 / x
+        <br><br>
+        **ब्याज यदि n गुना हो जाए तो
+        दर = (n * 100) / समय
+        <br><br>
+        समय = (n * 100 ) / दर
+        <br><br>
+        **यदि कोई धन एक निश्चित समय में साधारण ब्याज की दर से n1 गुनी हो जाती है तो उतने ही समय में n2 गुनी होने की दर,
+        दर = (n2 - 1)/(n1-1) *n1 गुनी होने की दर
+        <br><br>
+        उदाहरण: यदि कोई धन दो वर्षों में दो प्रतिशत वार्षिक ब्याज की दर से दुगुनी हो जती है तो किस दर से उसतने ही समय में पांच गुनी हो जाएगी ?
+        हल:
+        दर = (5-1)/(2-1)*2
+        = 8%Ans.
+        
+        **यदि कोई राशि किसी निश्चित साधारण ब्याज की दर से दिए गए समय में n1 गुनी हो जाती है तो n2 गुनी होने में लगा समय =
+        
+        (n2-1)/(n1-1)*n1 गुना होने में लगा समय
+        <br><br>
+        उदाहरण : एक निश्चित साधारण ब्याज की दर पर कोई राशि पांच वर्षों में दुगुनी हो जाती है, तो यह राशि उसी दर पर कितने वर्षों में दस गुनी हो जाएगी ?
+        हल :
+        समय = (10-1)/(2-1)/5 = 45 वर्ष उत्तर.
+        
+        **ब्याज की दर समान रहे और समय के अन्तर के कारण ब्याज में अन्तर हो तो मूलधन = ?
+         (ब्याज का अन्तर / समय का अन्तर)*100/दर
+         <br><br>
+        उदाहरण : दस प्रतिशत वार्षिक ब्याज की दर से पांच वर्षों व दस वर्षों के साधारण ब्याज का अन्तर 50 रूपया है, तो मूलधन क्या है ?
+        हल : 5 0/(1 0-5)*100/1 0 = 100 रूपया उत्तर.
+        
+        **अब यदि ब्याज का अन्तर दर में भिन्नता के कारण हो तो मूलधन =
+        (ब्याज का अन्तर/दर का अन्तर)*100/समय
+        <br><br>
+        उदाहरण : यदि ब्याज की दर 20% ना होकर 30% होता तो 5 वर्षों का ब्याज 100 रूपये अधिक होता. मूलधन की गणना करें.
+        
+        हल : मूलधन = (100/30-20)*100/5
+         अत : मूलधन = 200 रुपये.
+         <br><br>
+        Read More :-
+        गणित में बट्टा यानि छूट chapter
+        Profit and Loss Basics in English Medium
+        गणित में लाभ और हानि chapter
+        गणित में एकिक नियम
+        नाव और धरा - बोट एंड स्ट्रीम
+        Percentage [प्रतिशत] के फार्मूला एवं शार्ट ट्रिक्स
+        टाइम एंड वर्क [समय और कार्य] के सवाल हल कैसे करें ?
+        औसत चाल के फार्मूला
+        औसत के प्रश्न का हल सूत्र विधि से कैसे करें ?
+        <br><br>
+        अभ्यास प्रश्न :
+        1. कोई राशि 7 वर्षों के बाद 750 रुपये का साधारण ब्याज अर्जित करती है. यदि ब्याज 2% अधिक होता, तो राशि कितनी अधिक ब्याज अर्जित करती ?
+        <br><br>
+        2.6 वर्षों में किसी राशि पर 1500 रूपये का साधारण ब्याज अर्जित होता है. यदि दो वर्षों के बाद ब्याज प्रतिशत की दर दुगुनी कर दी जाए, तो कितना साधारण ब्याज प्राप्त होगा ?
+        <br><br>
+        3. किसी धन का 5% साधारण ब्याज की दर से ब्याज 4 साल में 800 रूपया है, तो धन बताएँ.
+        <br><br>
+        4. एक व्यक्ति ने एक बैंक से साधारण ब्याज की 12% की र से ऋण लिया. तीन वर्ष के पश्चात उसने 5400 रूपये उस समयावधि के लिए केवल ब्याज के रूप में लौटाए. ऋण स्वरूप ली गई मूल धनराशि कितनी थी ?
+        
+        <br><br>
+        5. किसी धन पर 3 वर्ष के लिए 14% प्रतिवर्ष की दर से तीन वर्षों का साधारण ब्याज 235.20 रूपये है. धनराशि क्या है ?
+        <br><br>
+        6. वह मूलधन जिस पर 6% प्रतिवर्ष की दर से 3 वर्ष का साधारण ब्याज 90 रूपया होगा ?
+        <br><br>
+        7. 1000 रूपये की राशि का कुछ भाग 8% वार्षिक की दर से तथा शेष 10 % वार्षिक की दर से उधार लिया जाता है. यदि औसत वार्षिक आय 9.2% हो, तो क्रमशः दोनो भाग बताएं.
+        <br><br>
+        तो इस प्रकार हमने जाना कि Simple Interest क्या है, हमने सिंपल इंटरेस्ट के फार्मूला एवं परीक्षा में साधारण ब्याज के सवाल को जल्दी से हल करने के लिए शार्ट ट्रिक्स भी देखे। यदि आपके पास साधारण ब्याज से सम्बंधित कोई प्रश्न अथवा समस्या हो, तो आप हमें कमेंट में अपनी समस्या जरूर बताएं।
+        <br><br></p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p> We Are Alice. An Online Eduacation Plateform For Quality Education.<br>
+            
+        Made By- Animesh Kumar, Somya Prajapati and Abhishek Yadav </p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+    </div>
+    <div class="card">
+      <h3>Follow</h3><br><br>
+      <a class="btn btn-social-icon btn-instagram" href="https://instagram.com/jagrati.iiitdmj?igshid=1deuevtefgqnb"><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  
+  <p>
+    copyright &copy; ALICE
+    <span id="date"></span>. all rights reserved
+  </p>
+</div>
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+
+</body>
+</html>

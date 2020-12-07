@@ -42,13 +42,24 @@ def signup1(request):
         c = request.POST['contact']
         e = request.POST['email']
         p = request.POST['pwd']
-        b = request.POST['branch']
         r = request.POST['role']
         try:
             user = User.objects.create_user(username=e,password=p,first_name=f,last_name=l)
-            Signup.objects.create(user=user,contact=c,branch=b,role=r)
+            Signup.objects.create(user=user,contact=c,role=r)
             error="no"
         except:
             error="yes"
     d={'error':error}
     return render(request, 'signup.html', d)
+
+def Logout(request):
+    logout(request)
+    return redirect('index')
+
+def profile(request):
+    if not request.user.is_authenticated:
+        return redirect('login')
+    user = User.objects.get(id=request.user.id)
+    data = Signup.objects.get(user = user)
+    d = {'data':data, 'user':user}
+    return render(request, 'profile.html', d)
