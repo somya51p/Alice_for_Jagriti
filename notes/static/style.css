@@ -42,4 +42,5 @@
     .nav-item:hover{
         background-color: orange;
         border-radius: 10px;
+        transition: 0.5s;
     }

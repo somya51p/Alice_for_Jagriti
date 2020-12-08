@@ -16,5 +16,6 @@ urlpatterns = [
     path('upload_notes/', upload_notes, name='upload_notes'),
     path('', index, name='index'),
     path('Book/', include('Book.urls')),
+    path('quiz/', include('quiz.urls'))
 
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
