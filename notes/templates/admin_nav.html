@@ -13,34 +13,37 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'style.css' %}">
-    <title>ALICE</title>
+    <title>NOTEZZ</title>
     
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-        <div class="container-fluid">
-            <a href="#" class="navbar-brand text-warning font-weight-bold">ALICE</a>
+        <div class="container">
+            <a href="#" class="navbar-brand text-warning font-weight-bold">NOTEZZ</a>
             <button class="navbar-toggler" type="button" data-toggler="collapse" data-target="#collapsenavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse text-center" id="collapsenavbar">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="{% url 'index' %}" class="nav-link text-white">HOME</a>
+                        <a href="{% url 'admin_home' %}" class="nav-link text-white">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle text-white" data-toggle="dropdown">VIEW NOTES</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">PENDING</a>
+                                <a class="dropdown-item" href="#">ACCEPTED</a>
+                                <a class="dropdown-item" href="#">REJECTED</a>
+                                <a class="dropdown-item" href="#">ALL NOTES</a>
+                            </div>
                     </li>
                     <li class="nav-item">
-                        <a href="{% url 'about' %}" class="nav-link text-white">ABOUT</a>
+                        <a href="#" class="nav-link text-white">VIEW USERS</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{% url 'contact' %}" class="nav-link text-white">CONTACT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{% url 'login' %}" class="nav-link text-white">LOGIN</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{% url 'login_admin' %}" class="nav-link text-white">ADMIN</a>
+                        <a href="{% url 'logout' %}" class="nav-link text-white">LOGOUT</a>
                     </li>
                 </ul>
             </div>

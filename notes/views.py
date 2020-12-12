@@ -84,3 +84,27 @@ def upload_notes(request):
             error="yes"
     d={'error':error}
     return render(request, 'upload_notes.html', d)
+
+
+def login_admin(request):
+    error = ""
+    if request.method == 'POST':
+        u = request.POST['uname']
+        p = request.POST['pwd']
+        user = authenticate(username=u, password=p)
+        try:
+            if user.is_staff:
+                login(request, user)
+                error = "no"
+            else:
+                error = "yes"
+        except:
+            error = "yes"
+    d = {'error': error}
+    return render(request, 'login_admin.html', d)
+
+
+def admin_home(request):
+    if not request.user.is_staff:
+        return redirect('login_admin')
+    return render(request, 'admin_home.html')
