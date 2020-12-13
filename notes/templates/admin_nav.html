@@ -14,6 +14,50 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <title>NOTEZZ</title>
+    <style>
+        /* Dropdown Button */
+.dropbtn {
+  background-color: gray;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  font-weight: bold;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: orange}
+    </style>
     
 </head>
 
@@ -30,17 +74,17 @@
                     <li class="nav-item">
                         <a href="{% url 'admin_home' %}" class="nav-link text-white">HOME</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle text-white" data-toggle="dropdown">VIEW NOTES</a>
+                    <!-- <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">VIEW NOTES</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">PENDING</a>
-                                <a class="dropdown-item" href="#">ACCEPTED</a>
-                                <a class="dropdown-item" href="#">REJECTED</a>
-                                <a class="dropdown-item" href="#">ALL NOTES</a>
+                                <a href="#">PENDING</a>
+                                <a href="#">ACCEPTED</a>
+                                <a href="#">REJECTED</a>
+                                <a href="#">ALL NOTES</a>
                             </div>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-white">VIEW USERS</a>
+                        <a href="{% url 'view_users' %}" class="nav-link text-white">VIEW USERS</a>
                     </li>
                     <li class="nav-item">
                         <a href="{% url 'logout' %}" class="nav-link text-white">LOGOUT</a>
@@ -49,8 +93,18 @@
             </div>
                        
         </div>
-    </nav>
-
+    </nav><br><hr>
+<center>
+    <div class="dropdown">
+        <button class="dropbtn">VIEW NOTES</button>
+        <div class="dropdown-content">
+          <a href="{% url 'pending_notes' %}">PENDING</a>
+          <a href="#">ACCEPTED</a>
+          <a href="#">REJECTED</a>
+          <a href="#">ALL NOTES</a>
+        </div>
+      </div>
+</center>
     
     {% block body %}
     {% endblock %}

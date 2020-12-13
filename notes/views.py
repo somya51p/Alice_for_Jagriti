@@ -126,3 +126,57 @@ def delete_mynotes(request,pid):
     notes = Notes.objects.get(id=pid)
     notes.delete()
     return redirect('view_mynotes')
+
+
+def view_users(request):
+    if not request.user.is_authenticated:
+        return redirect('login_admin')
+    users = Signup.objects.all()
+    
+    d = {'users':users}
+    return render(request, 'view_users.html',d)
+
+
+def delete_user(request,pid):
+    if not request.user.is_staff:
+        return redirect('view_users')
+    user = User.objects.get(id=pid)
+    user.delete()
+    return redirect('view_users')
+
+
+def pending_notes(request):
+    if not request.user.is_authenticated:
+        return redirect('login_admin')
+
+    notes = Notes.objects.filter(status="pending")
+    
+    d = {'notes':notes}
+    return render(request, 'pending_notes.html',d)
+
+
+def accepted_notes(request):
+    if not request.user.is_authenticated:
+        return redirect('login_admin')
+
+    notes = Notes.objects.filter(status="pending")
+    
+    d = {'notes':notes}
+    return render(request, 'accepted_notes.html',d)
+
+
+def assign_status(request,pid):
+    if not request.user.is_staff:
+        return redirect('login_admin')
+    notes = Notes.objects.get(id=pid)
+    error = ""
+    if request.method == 'POST':
+        s = request.POST['status']
+        try:
+            notes.status = s
+            notes.save()
+            error="no"
+        except:
+            error="yes"
+    d={'notes':notes,'error':error}
+    return render(request, 'assign_status.html', d)
