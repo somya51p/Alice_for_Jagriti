@@ -1,0 +1,10 @@
+{% extends 'admin_nav.html' %}
+
+<p>CONGRATULATIONS YOU HAVE UPLOADED QUESTION:</p>
+<P>{{ question.ques_text }}</P>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ option_formset.as_p }}
+    <button type="submit">Save</button>
+</form>
