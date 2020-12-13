@@ -108,3 +108,21 @@ def admin_home(request):
     if not request.user.is_staff:
         return redirect('login_admin')
     return render(request, 'admin_home.html')
+
+
+def view_mynotes(request):
+    if not request.user.is_authenticated:
+        return redirect('login')
+    user = User.objects.get(id=request.user.id)
+    notes = Notes.objects.filter(user = user)
+    
+    d = {'notes':notes}
+    return render(request, 'view_mynotes.html',d)
+
+
+def delete_mynotes(request,pid):
+    if not request.user.is_staff:
+        return redirect('login')
+    notes = Notes.objects.get(id=pid)
+    notes.delete()
+    return redirect('view_mynotes')

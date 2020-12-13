@@ -14,9 +14,11 @@ urlpatterns = [
     path('logout/', Logout, name='logout'),
     path('profile/', profile, name='profile'),
     path('upload_notes/', upload_notes, name='upload_notes'),
+    path('view_mynotes/', view_mynotes, name='view_mynotes'),
     path('login_admin/', login_admin, name='login_admin'),
     path('admin_home/', admin_home, name='admin_home'),
     path('', index, name='index'),
+    path('delete_mynotes/<int:pid>', delete_mynotes, name='delete_mynotes'),
     path('Book/', include('Book.urls')),
     path('quiz/', include('quiz.urls'))
 
