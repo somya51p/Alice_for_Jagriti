@@ -48,7 +48,8 @@ class Attempt(models.Model):
     total_score = models.IntegerField(default=0)
     submitted_at = models.DateTimeField(auto_now=True)
 
-    def __str__(self) -> str: return self.pk
+    def __str__(self):
+        return "attempt"+str(self.id)
 
 class User_Answer(models.Model):
     attempt = models.ForeignKey(Attempt, on_delete=CASCADE)

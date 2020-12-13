@@ -1,26 +1,102 @@
+{% include 'quiz/quiz_nav.html' %}
 
-<p>Hello {{ attempt.user }} Result of this quiz is:  </p>
-<p>No of Question is/are {{no_of_questions}}</p>
-<table>
-    <tr>
-        <th>Question Number</th>
-        <th>Your Response</th>
-        <th>Correct Response</th>
-        <th>Max Score</th>
-        <th>Your Score</th>
-        {% for ans in answers %}
+<style>
+    * {
+      font-family: sans-serif; /* Change your font family */
+    }
+    body{
+    /* margin: 20px; */
+    background-image: linear-gradient(to bottom right, rgb(255, 145, 0) , rgb(248, 248, 248));
+}
+    
+
+    .content-table {
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-size: 0.9em;
+      width: 80%;
+      border-radius: 5px 5px 0 0;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .content-table thead tr {
+      background-color: #e92626;
+      color: #ffffff;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    .content-table th,
+    .content-table td {
+      padding: 12px 15px;
+    }
+
+    .content-table tbody tr {
+      border-bottom: 1px solid #dddddd;
+    }
+
+    .content-table tbody tr:nth-of-type(even) {
+      background-color: #f8a812;
+    }
+
+    .content-table tbody tr:nth-of-type(odd){
+      background-color: #ffffff;
+    }
+
+    .content-table tbody tr:last-of-type {
+      border-bottom: 2px solid #009879;
+    }
+
+    .content-table tbody tr.active-row {
+      font-weight: bold;
+      color: #009879;
+    }
+    .question{
+    width: 50%;
+    margin: 20px;
+    background-color: wheat;
+    padding: 10px;
+}
+   </style>
+
+<center><small><b style="color: rgb(231, 18, 18); background-color: white;">
+    Hello {{ user }} Result of this quiz is: <br>
+</b></small></center></div>
+<center>
+  <div class="question">
+    No of Question is/are: {{no_of_questions}} <br>
+    Max Possible Score: {{max_possible_score}} <br>
+    your Score: {{ total_score }}
+</div>
+</center>
+<center>
+    <table class="content-table">
+        <thead>
             <tr>
-                <td>{{forloop.counter}}</td>
-                <td>{{ ans.0 }}</td>
-                <td>{{ ans.1 }}</td>
-                <td>{{ ans.2 }}</td>
-                <td>{% if ans.0 == ans.1 %}
-                        {{ans.2}}
-                    {% else %}
-                        {{ 0 }}
-                    {% endif %}
-                </td>
+                <th>Question Number</th>
+                <th>Your Response</th>
+                <th>Correct Response</th>
+                <th>Max Score</th>
+                <th>Your Score</th>
             </tr>
-        {% endfor %}
-    </tr>
-</table>
+        </thead>
+        <tbody>
+            {% for ans in answers %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{ ans.0 }}</td>
+                    <td>{{ ans.1 }}</td>
+                    <td>{{ ans.2 }}</td>
+                    <td>{% if ans.0 == ans.1 %}
+                            {{ans.2}}
+                        {% else %}
+                            {{ 0 }}
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        
+    </table>
+</center>

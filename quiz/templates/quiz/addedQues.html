@@ -1,10 +1,95 @@
-{% include 'admin_nav.html' %}
+{% include 'quiz/quiz_nav.html' %}
 
-<p>CONGRATULATIONS YOU HAVE UPLOADED QUESTION:</p>
-<P>{{ question.ques_text }}</P>
+<style>
+    /* *{
+    box-sizing: border-box;
+} */
 
-<form action="" method="POST">
-    {% csrf_token %}
-    {{ option_formset.as_p }}
-    <button type="submit">Save</button>
-</form>
+body{
+    /* margin: 20px; */
+    background-image: linear-gradient(to bottom right, rgb(255, 145, 0) , rgb(248, 248, 248));
+}
+
+/* .container0{ 
+    margin: 12% auto;
+    
+} */
+
+.container1{
+    display: inline-block;
+    text-align: center;
+    border: 1px solid;
+    background-image: linear-gradient(to left, rgb(219, 133, 21) , rgb(238, 206, 101));
+}
+
+.question{
+    width: 50%;
+    margin: 20px;
+    background-color: wheat;
+    padding: 10px;
+}
+
+.form-unit{
+    margin: 30px;
+    margin-bottom: 50px;
+    
+}
+
+.form-unit textarea{
+    vertical-align: middle;
+    margin-left: 20px;
+    margin-right: 30px;
+}
+
+input{
+    text-align: center;
+    /* width: 100%; */
+    margin-right: 30px;
+}
+
+.buttonsp{
+    margin: 15px auto;
+    box-sizing: border-box;
+}
+
+input[type=submit]{
+    width: 20%;
+    /* min-width: 80px; */
+    padding: 5px;
+    cursor: pointer;
+}
+
+label{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+</style>
+<center>
+    <div class="container0">
+        {% if added %}
+            <center><small><b style="color: rgb(231, 18, 18); background-color: white;">CONGRATULATIONS! YOU HAVE ADDED THE OPTIONS</b></small></center></div>
+        {% else %}
+            <center><small><b style="color: rgb(231, 18, 18); background-color: white;">CONGRATULATIONS! YOU HAVE UPLOADED THE QUESTION</b></small></center>
+        {% endif %}
+        <div class="question">
+            <b> Question{{question.id}}</b>
+            <p>{{ question.ques_text }}</p>
+        </div>
+          
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="container1">
+                {{ option_formset.management_form }}
+                {% for form in option_formset %}
+                    <div class="form-unit">
+                        {{form}}
+                    </div>
+                {% endfor %}
+                <div class="buttonsp">
+                    <input type="submit" value="Submit">
+                </div>
+            </div>    
+        </form>
+    </div>
+</center>

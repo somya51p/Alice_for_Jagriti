@@ -35,7 +35,9 @@ def quiz_for_chapteri(request, num):
 
         attempt.total_score = total_score
         attempt.save()
-        request.session['attempt_id'] = attempt.id
+        request.session['attempt_id'] = attempt.pk
+        request.session['total_score'] = total_score
+        print("here is "+ str(request.session['attempt_id']))
         return redirect('quiz:result')   
         # return HttpResponse(f" so {request.user.username} your total score is {total_score}")
     return render(request,'chap/quiz.html',{'questions': questions})
@@ -48,10 +50,6 @@ def add_question(request):
         # option_form = QuizOptionForm(request.POST)
         if ques_form.is_valid():
             ques = ques_form.save()
-            # option = option_form.save(False)
-
-            # option.question = ques
-            # option.save()
 
             return redirect('quiz:add_Option',ques_id=ques.pk)
         else:
@@ -68,7 +66,6 @@ def add_question(request):
 
 def add_Option(request, ques_id):
     ques = Question.objects.get(pk=ques_id)
-    option_formset = OptionFormSet()
 
     context = {'question':ques}
 
@@ -76,6 +73,7 @@ def add_Option(request, ques_id):
         option_formset = OptionFormSet(request.POST,instance = ques)
         if option_formset.is_valid():
             option_formset.save()
+            context['added'] = True
 
 
     context['option_formset'] = OptionFormSet(instance = ques)
@@ -91,6 +89,8 @@ def result(request):
     context['user'] = attempt.user
     context['attempt_no'] = Attempt.objects.filter(user=attempt.user).count()
     context['no_of_questions'] = (user_answer.count())
+    context['total_score'] = request.session['total_score']
+    context['max_possible_score'] = 4 * int(user_answer.count())
     # list to store tuple of user answer and correct answer and max marks respectively
     ans_list = []
     for ans in user_answer:
