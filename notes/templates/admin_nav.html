@@ -19,7 +19,7 @@
 .dropbtn {
   background-color: gray;
   color: white;
-  padding: 16px;
+  padding: 6px;
   font-size: 16px;
   border: none;
   font-weight: bold;
@@ -36,7 +36,7 @@
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
+  min-width: 100px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -74,15 +74,15 @@
                     <li class="nav-item">
                         <a href="{% url 'admin_home' %}" class="nav-link text-white">HOME</a>
                     </li>
-                    <!-- <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">VIEW NOTES</a>
-                            <div class="dropdown-menu">
-                                <a href="#">PENDING</a>
-                                <a href="#">ACCEPTED</a>
-                                <a href="#">REJECTED</a>
-                                <a href="#">ALL NOTES</a>
-                            </div>
-                    </li> -->
+                    <li><div class="dropdown">
+                        <button class="dropbtn">VIEW NOTES</button>
+                        <div class="dropdown-content">
+                          <a href="{% url 'pending_notes' %}">PENDING</a>
+                          <a href="{% url 'accepted_notes' %}">ACCEPTED</a>
+                          <a href="{% url 'rejected_notes' %}">REJECTED</a>
+                          <a href="{% url 'all_notes' %}">ALL NOTES</a>
+                        </div>
+                      </div></li>
                     <li class="nav-item">
                         <a href="{% url 'view_users' %}" class="nav-link text-white">VIEW USERS</a>
                     </li>
@@ -94,7 +94,7 @@
                        
         </div>
     </nav><br><hr>
-<center>
+<!-- <center>
     <div class="dropdown">
         <button class="dropbtn">VIEW NOTES</button>
         <div class="dropdown-content">
@@ -104,7 +104,7 @@
           <a href="{% url 'all_notes' %}">ALL NOTES</a>
         </div>
       </div>
-</center>
+</center> -->
     
     {% block body %}
     {% endblock %}
