@@ -2,6 +2,7 @@ from django.http.response import HttpResponse
 from django.shortcuts import redirect, render
 
 from django.contrib.auth.models import User
+from .forms import QuizQuestionForm, OptionFormSet
 from .models import Question, User_Answer, Attempt, Chapter,Option
 # Create your views here.
 
@@ -34,15 +35,51 @@ def quiz_for_chapteri(request, num):
 
         attempt.total_score = total_score
         attempt.save()
-        request.session['attempt_id'] = attempt.id
+        request.session['attempt_id'] = attempt.pk
+        request.session['total_score'] = total_score
+        print("here is "+ str(request.session['attempt_id']))
         return redirect('quiz:result')   
         # return HttpResponse(f" so {request.user.username} your total score is {total_score}")
     return render(request,'chap/quiz.html',{'questions': questions})
 
 
-def quiz_maker(request):
+def add_question(request):
+    context = {}
+    if request.method == 'POST':
+        ques_form = QuizQuestionForm(request.POST)
+        # option_form = QuizOptionForm(request.POST)
+        if ques_form.is_valid():
+            ques = ques_form.save()
 
-    return HttpResponse("great! you wanna create quiz, will get to you soon")
+            return redirect('quiz:add_Option',ques_id=ques.pk)
+        else:
+            context['ques_form'] = ques_form
+            # context['option_form'] = option_form
+
+    else:
+        context['ques_form'] = QuizQuestionForm()
+        # context['option_form'] = QuizOptionForm()
+    
+    return render(request, 'quiz/addQues.html', context)
+
+
+
+def add_Option(request, ques_id):
+    ques = Question.objects.get(pk=ques_id)
+
+    context = {'question':ques}
+
+    if request.method == 'POST':
+        option_formset = OptionFormSet(request.POST,instance = ques)
+        if option_formset.is_valid():
+            option_formset.save()
+            context['added'] = True
+
+
+    context['option_formset'] = OptionFormSet(instance = ques)
+
+
+    return render(request, 'quiz/addedQues.html', context)
 
 def result(request):
     attempt_id = request.session['attempt_id']
@@ -52,6 +89,8 @@ def result(request):
     context['user'] = attempt.user
     context['attempt_no'] = Attempt.objects.filter(user=attempt.user).count()
     context['no_of_questions'] = (user_answer.count())
+    context['total_score'] = request.session['total_score']
+    context['max_possible_score'] = 4 * int(user_answer.count())
     # list to store tuple of user answer and correct answer and max marks respectively
     ans_list = []
     for ans in user_answer:

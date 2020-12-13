@@ -1,13 +1,71 @@
+{% include 'quiz/quiz_nav.html' %}
+<style>
+*{ margin: 0; padding: 0; }
+body{ 
+    font: 14px Georgia, serif; 
+    background-image: linear-gradient(to bottom right, rgb(255, 145, 0) , rgb(248, 248, 248));
+}
+
+#page-wrap{
+    width: 900px; margin: 0 auto;
+    background-color: rgb(243, 219, 109);
+}
+
+h1{ margin: 25px 0; font: 14px Georgia, Serif; text-transform: uppercase; letter-spacing: 3px; }
+
+#quiz{
+    padding: 25px;
+}
+
+#quiz input {
+    vertical-align: middle;
+}
+
+#quiz ol {
+   margin: 0 0 10px 20px;
+}
+
+#quiz ol li {
+   margin: 0 0 20px 0;
+}
+
+#quiz ol li div {
+   padding: 4px 0;
+}
+
+#quiz h3 {
+   font-size: 17px; margin: 0 0 1px 0; color: rgb(29, 28, 28);
+   font-weight: bold;
+}
+
+input[type=submit]{
+    width: 20%;
+    /* min-width: 80px; */
+    padding: 5px;
+    cursor: pointer;
+}
 
 
-<form action="" method="POST">
-    {% csrf_token %}
-    {% for question in questions %}
-    <p><label for="{{question.id}}"></label>{{ question.ques_text }}</p>
-    {% for option in question.option_set.all %}
-        <input type="radio" name="answer{{question.id}}" id="{{question.id}}" value="{{option.id}}">{{ option.option_num }}. {{option.option_text}} <br>
-    {% endfor %}
-{% endfor %}
+</style>
+<div id="page-wrap" >
+    <form action="" method="POST" id="quiz">
+        {% csrf_token %}
+            <ol>
+                <div class="quizzy">
+                    {% for question in questions %}
+                        <li>
+                            <h3><label for="{{question.id}}"></label>{{ question.ques_text }}</h3>
+                            <div class="option">
+                                {% for option in question.option_set.all %}
+                                <p><input type="radio" name="answer{{question.id}}" id="{{question.id}}" value="{{option.id}}">{{ option.option_num }}) {{option.option_text}}</p>
+                                {% endfor %}    
+                            </div>
+                        </li>
+                    {% endfor %}
+                </div>
+            </ol>
 
-    <input type="submit" value="submit">
-</form>
+
+        <input type="submit" value="submit">
+    </form>
+</div>

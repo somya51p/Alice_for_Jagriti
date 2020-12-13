@@ -18,6 +18,8 @@ class Question(models.Model):
     score = models.IntegerField(default=4)
     ques_text = models.TextField()
 
+    def __str__(self):
+        return "question"+str(self.id)
 
 class Option(models.Model):
     question = models.ForeignKey(Question, on_delete=CASCADE)
@@ -33,7 +35,10 @@ class Option(models.Model):
         default='A',
     )
 
-    def __str__(self) -> str: return self.option_num
+    def __str__(self):
+        opt = self.option_num
+        ques = self.question.pk
+        return (str(ques)+opt)
 
 
 class Attempt(models.Model):
@@ -43,7 +48,8 @@ class Attempt(models.Model):
     total_score = models.IntegerField(default=0)
     submitted_at = models.DateTimeField(auto_now=True)
 
-    def __str__(self) -> str: return self.pk
+    def __str__(self):
+        return "attempt"+str(self.id)
 
 class User_Answer(models.Model):
     attempt = models.ForeignKey(Attempt, on_delete=CASCADE)
