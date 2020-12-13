@@ -51,6 +51,7 @@
 {% ifequal error "no" %}
 <script>
     alert('Status update Successfull');
+    window.location=("{% url 'all_notes' %}");
 </script>
 {% endifequal %}
 

@@ -99,9 +99,9 @@
         <button class="dropbtn">VIEW NOTES</button>
         <div class="dropdown-content">
           <a href="{% url 'pending_notes' %}">PENDING</a>
-          <a href="#">ACCEPTED</a>
-          <a href="#">REJECTED</a>
-          <a href="#">ALL NOTES</a>
+          <a href="{% url 'accepted_notes' %}">ACCEPTED</a>
+          <a href="{% url 'rejected_notes' %}">REJECTED</a>
+          <a href="{% url 'all_notes' %}">ALL NOTES</a>
         </div>
       </div>
 </center>

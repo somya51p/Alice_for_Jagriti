@@ -107,14 +107,19 @@ def login_admin(request):
 def admin_home(request):
     if not request.user.is_staff:
         return redirect('login_admin')
-    return render(request, 'admin_home.html')
+    p = Notes.objects.filter(status="pending").count()
+    a = Notes.objects.filter(status="Accept").count()
+    r = Notes.objects.filter(status="Reject").count()
+    all = Notes.objects.all().count()
+    d = {'p':p,'a':a,'r':r,'all':all}
+    return render(request, 'admin_home.html',d)
 
 
 def view_mynotes(request):
     if not request.user.is_authenticated:
         return redirect('login')
     user = User.objects.get(id=request.user.id)
-    notes = Notes.objects.filter(user = user)
+    notes = Notes.objects.filter(status="Accept")
     
     d = {'notes':notes}
     return render(request, 'view_mynotes.html',d)
@@ -159,10 +164,30 @@ def accepted_notes(request):
     if not request.user.is_authenticated:
         return redirect('login_admin')
 
-    notes = Notes.objects.filter(status="pending")
+    notes = Notes.objects.filter(status="Accept")
     
     d = {'notes':notes}
     return render(request, 'accepted_notes.html',d)
+
+
+def rejected_notes(request):
+    if not request.user.is_authenticated:
+        return redirect('login_admin')
+
+    notes = Notes.objects.filter(status="Reject")
+    
+    d = {'notes':notes}
+    return render(request, 'rejected_notes.html',d)
+
+
+def all_notes(request):
+    if not request.user.is_authenticated:
+        return redirect('login_admin')
+
+    notes = Notes.objects.all()
+    
+    d = {'notes':notes}
+    return render(request, 'all_notes.html',d)
 
 
 def assign_status(request,pid):
@@ -180,3 +205,11 @@ def assign_status(request,pid):
             error="yes"
     d={'notes':notes,'error':error}
     return render(request, 'assign_status.html', d)
+
+
+def delete_notes(request,pid):
+    if not request.user.is_staff:
+        return redirect('login')
+    notes = Notes.objects.get(id=pid)
+    notes.delete()
+    return redirect('all_notes')
