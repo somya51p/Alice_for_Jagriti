@@ -67,9 +67,21 @@
             </button>
             <div class="collapse navbar-collapse text-center" id="collapsenavbar">
                 <ul class="navbar-nav ml-auto">
+
                     <li class="nav-item">
                         <a href="{% url 'quiz:home' %}" class="nav-link text-white">HOME-QUIZ</a>
                     </li>
+                    <li><div class="dropdown">
+                        <button class="dropbtn">DO QUIZ</button>
+                        <div class="dropdown-content">
+                          <a href="{% url 'quiz:chap_quiz' 1 %}">Chapter1</a>
+                          <a href="{% url 'quiz:chap_quiz' 2 %}">Chapter2</a>
+                          <a href="{% url 'quiz:chap_quiz' 3 %}">Chapter3</a>
+                          <a href="{% url 'quiz:chap_quiz' 4 %}">Chapter4</a>
+                          <a href="{% url 'quiz:chap_quiz' 5 %}">Chapter5</a>
+                          
+                        </div>
+                      </div></li>
                     <li class="nav-item">
                         <a href="{% url 'quiz:add_Quesiton' %}" class="nav-link text-white">ADD QUESTION</a>
                     </li>
