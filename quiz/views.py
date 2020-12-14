@@ -1,17 +1,19 @@
 from django.http.response import HttpResponse
 from django.shortcuts import redirect, render
+from django.contrib.auth.decorators import login_required
+from django.contrib.admin.views.decorators import staff_member_required
 
 from django.contrib.auth.models import User
 from .forms import QuizQuestionForm, OptionFormSet
 from .models import Question, User_Answer, Attempt, Chapter,Option
 # Create your views here.
 
-
+@login_required
 def home(request):
     attempts = Attempt.objects.all()
     return render(request, 'quiz/index.html', {'attempts': attempts})
 
-
+@login_required
 def quiz_for_chapteri(request, num):
     try:
         questions = Question.objects.filter(chapter=Chapter.objects.get(pk=int(num)))
@@ -42,7 +44,7 @@ def quiz_for_chapteri(request, num):
         # return HttpResponse(f" so {request.user.username} your total score is {total_score}")
     return render(request,'chap/quiz.html',{'questions': questions})
 
-
+@staff_member_required(login_url='/login_admin/')
 def add_question(request):
     context = {}
     if request.method == 'POST':
@@ -81,6 +83,7 @@ def add_Option(request, ques_id):
 
     return render(request, 'quiz/addedQues.html', context)
 
+@login_required
 def result(request):
     attempt_id = request.session['attempt_id']
     attempt = Attempt.objects.get(pk=attempt_id)
