@@ -1,8 +1,11 @@
 from django.shortcuts import render,redirect
+from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from . models import *
 from django.contrib.auth import authenticate,logout,login
 from datetime import date
+from django.contrib.auth.decorators import login_required
+from django.contrib.admin.views.decorators import staff_member_required
 
 # Create your views here.
 
@@ -57,6 +60,7 @@ def Logout(request):
     logout(request)
     return redirect('index')
 
+@login_required
 def profile(request):
     if not request.user.is_authenticated:
         return redirect('login')
@@ -65,7 +69,7 @@ def profile(request):
     d = {'data':data, 'user':user}
     return render(request, 'profile.html', d)
 
-
+@login_required
 def edit_profile(request):
     if not request.user.is_authenticated:
         return redirect('login')
@@ -87,7 +91,7 @@ def edit_profile(request):
     d = {'data':data, 'user':user, 'error':error}
     return render(request, 'edit_profile.html', d)
 
-
+@login_required
 def changepassword(request):
     if not request.user.is_authenticated:
         return redirect('login')
@@ -106,7 +110,7 @@ def changepassword(request):
     d={'error':error}
     return render(request, 'changepassword.html',d)
 
-
+@login_required
 def upload_notes(request):
     if not request.user.is_authenticated:
         return redirect('login')
@@ -145,7 +149,7 @@ def login_admin(request):
     d = {'error': error}
     return render(request, 'login_admin.html', d)
 
-
+@staff_member_required(login_url='/login_admin/')
 def admin_home(request):
     if not request.user.is_staff:
         return redirect('login_admin')
@@ -156,7 +160,7 @@ def admin_home(request):
     d = {'p':p,'a':a,'r':r,'all':all}
     return render(request, 'admin_home.html',d)
 
-
+@login_required
 def view_mynotes(request):
     if not request.user.is_authenticated:
         return redirect('login')
@@ -166,7 +170,7 @@ def view_mynotes(request):
     d = {'notes':notes}
     return render(request, 'view_mynotes.html',d)
 
-
+@staff_member_required(login_url='/login_admin/')
 def delete_mynotes(request,pid):
     if not request.user.is_staff:
         return redirect('login')
@@ -174,7 +178,7 @@ def delete_mynotes(request,pid):
     notes.delete()
     return redirect('view_mynotes')
 
-
+@staff_member_required(login_url='/login_admin/')
 def view_users(request):
     if not request.user.is_authenticated:
         return redirect('login_admin')
@@ -183,7 +187,7 @@ def view_users(request):
     d = {'users':users}
     return render(request, 'view_users.html',d)
 
-
+@staff_member_required(login_url='/login_admin/')
 def delete_user(request,pid):
     if not request.user.is_staff:
         return redirect('view_users')
@@ -191,7 +195,7 @@ def delete_user(request,pid):
     user.delete()
     return redirect('view_users')
 
-
+@staff_member_required(login_url='/login_admin/')
 def pending_notes(request):
     if not request.user.is_authenticated:
         return redirect('login_admin')
@@ -201,7 +205,7 @@ def pending_notes(request):
     d = {'notes':notes}
     return render(request, 'pending_notes.html',d)
 
-
+@staff_member_required(login_url='/login_admin/')
 def accepted_notes(request):
     if not request.user.is_authenticated:
         return redirect('login_admin')
@@ -211,7 +215,7 @@ def accepted_notes(request):
     d = {'notes':notes}
     return render(request, 'accepted_notes.html',d)
 
-
+@staff_member_required(login_url='/login_admin/')
 def rejected_notes(request):
     if not request.user.is_authenticated:
         return redirect('login_admin')
@@ -221,7 +225,7 @@ def rejected_notes(request):
     d = {'notes':notes}
     return render(request, 'rejected_notes.html',d)
 
-
+@staff_member_required(login_url='/login_admin/')
 def all_notes(request):
     if not request.user.is_authenticated:
         return redirect('login_admin')
@@ -231,7 +235,7 @@ def all_notes(request):
     d = {'notes':notes}
     return render(request, 'all_notes.html',d)
 
-
+@staff_member_required(login_url='/login_admin/')
 def assign_status(request,pid):
     if not request.user.is_staff:
         return redirect('login_admin')
@@ -248,7 +252,7 @@ def assign_status(request,pid):
     d={'notes':notes,'error':error}
     return render(request, 'assign_status.html', d)
 
-
+@login_required
 def delete_notes(request,pid):
     if not request.user.is_staff:
         return redirect('login')

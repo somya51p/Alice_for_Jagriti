@@ -1,15 +1,17 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
 
 # chapter list view
 # have to style it as card view 
+@login_required
 def chapter_index(request):
     return render(request, 'Book/chapter_index.html')
 
 
-
+@login_required
 def chapter(request, num):
 
     # chapter_list is containing list of all chapters
