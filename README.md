@@ -19,7 +19,9 @@ python reqirements.txt
 Followed by these commands in terminal itself:
 
 python manage.py migrate
+
 python manage.py makemigrations notes,quiz,Book
+
 python manage.py migrate
 
 *************************************************************
