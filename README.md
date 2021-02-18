@@ -8,7 +8,7 @@ This is an interactive textbook for students preparing for navodaya entrance exa
 
 Open gitbash and type the following command:
 
-git clone "https://github.com/somya51p/Alice_for_Jagriti/"
+<b>git clone "https://github.com/somya51p/Alice_for_Jagriti/"</b>
 
 *************************************************************
 Open Visual Studio code and type the following command in terminal:
