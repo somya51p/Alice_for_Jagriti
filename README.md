@@ -8,34 +8,34 @@ This is an interactive textbook for students preparing for navodaya entrance exa
 
 Open gitbash and type the following command:
 
-<b>git clone "https://github.com/somya51p/Alice_for_Jagriti/"</b>
+###### git clone "https://github.com/somya51p/Alice_for_Jagriti/"</b>
 
 *************************************************************
 Open Visual Studio code and type the following command in terminal:
 
-python reqirements.txt
+###### python reqirements.txt
 
 *************************************************************
 Followed by these commands in terminal itself:
 
-python manage.py migrate
+###### python manage.py migrate
 
-python manage.py makemigrations notes,quiz,Book
+###### python manage.py makemigrations notes,quiz,Book
 
-python manage.py migrate
+###### python manage.py migrate
 
 *************************************************************
 
 To run the Alice app then type:
 
-python manage.py runserver
+###### python manage.py runserver
 
 This would make the app run in the browser..
 **************************************************************
 
 In order to access the django-admin, One must create a superuser so type the following command for the same:
 
-python manage.py createsuperuser
+###### python manage.py createsuperuser
 
 Fill the required details and it would be created..
 
