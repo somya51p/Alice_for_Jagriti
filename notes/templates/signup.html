@@ -19,12 +19,15 @@
 <script>
     function showPassword() {
         let x = document.getElementById("pwd");
+        let y = document.getElementById("togglePassword");
         if (x.type === "password") {
         x.type = "text";
+        y.className='fa fa-eye-slash';
         } else {
         x.type = "password";
+        y.className='fa fa-eye';
         }
-    }
+   }
 </script>
 
 <style>
@@ -34,6 +37,11 @@
         margin-top:30px;
         padding-top: 10px;
     }
+
+    .container i {
+        position: relative;
+        cursor: pointer;
+   }
 </style>
 
 <div class="container mt-5">
@@ -68,8 +76,7 @@
                 <div class="form-group">
                   <label for="pwd">Password:</label>
                   <input type="password" class="form-control" placeholder="Enter password" name="pwd" id="pwd">
-                  </br>
-                  <input type="checkbox" onclick="showPassword()"> Show Password
+                  <i class="fa fa-eye" id="togglePassword" onclick="showPassword()"></i>
                 </div>
                 <div class="form-group">
                     <label for="role">Role:</label>
