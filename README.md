@@ -2,6 +2,13 @@
 
 This is an interactive textbook for students preparing for navodaya entrance exams. It contains static notes in Hindi as well and mentors can upload notes too for student's healthy preparation. It has a quiz and result portal which could be used by students to analyze student's performance. Quiz can be uploaded by mentors only. Students can upload queries too, which would be answered by students. The website contains an admin portal where notes uploaded would be approved to maintain decorum in the community. The admin also has the right to remove the registered user. Thus, this website can become a platform for the students to test themselves under the best guidance. 
 
+## Technology Stack
+
+1. Django
+2. Bootstrap
+3. HTML5/ CSS
+4. Javascript
+
 ************************************************************
 
 # How to Clone this repo
